@@ -12,13 +12,14 @@ My solution for the GildedRose refactoring problem.
 - Add new functionality (TDD)
 - Check that everything is covered.
 - Commit and go to sleep
+- Add eslint, cleanup some code remarks.
 
 ## Non-implemented stuff
 
 - No validation. For example, one is free to add an item with quality -200 (or, worse, undefined). It will get corrected to zero the first loop (due to business rules) but this implies that the first loop is for fixing the input errors. I assumed that there is some kind of input validation, but as I could not adjust the interface/item class it would make code a bit too complex and it would violate the SRP principle (the update method should not be responsible for input validation).
 - After I typed the previous point I _did_ add a prevalidation step for my own peace of mind. This step doesn't validatie against undefined/null/wrong datatype,but will reset any out of bounds items to the boundaries (quality 0 or 50).
 - No "combined conjurations" are possible. For example, it was unclear for me how the specs work for summoned Brie, as the part of the conjuring spec only talks about "degrading quality".
-- I would add types to the Item class' constructor for readability and extra safeguarding.
+- I would add types to the Item class' constructor for readability and extra safeguarding. These are also the only eslint issues remaining for now (checkable with `npm run lint`)
 
 ## Time needed
 

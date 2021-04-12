@@ -32,7 +32,7 @@ export class GildedRose {
     });
   }
 
-  public updateQuality() {
+  public updateQuality(): void {
     this.prevalidate();
     this.items.forEach((item) => {
       const rules = this.config.itemsThatHaveSpecialRules.filter((x) =>

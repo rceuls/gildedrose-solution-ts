@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { Item } from "../app/gilded-rose";
-import { defaultRule, ruleForBrie } from "../app/gilded-rose-rules";
+import { ruleForBrie } from "../app/gilded-rose-rules";
 
 // Added some basic unit tests for existing functionality.
 // Normally these should exist => see also golden-master-integration.spec.ts.

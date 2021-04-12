@@ -62,7 +62,7 @@ export const ruleForSummons: IGildedRoseSpecialRule = {
   },
 };
 
-export const defaultRule = (item: Item) => {
+export const defaultRule: (item: Item) => void = (item: Item) => {
   const degradeSpeed = item.sellIn <= 0 ? 2 : 1;
   item.quality -= degradeSpeed;
   item.sellIn -= 1;

@@ -16,7 +16,7 @@ const items = [
 ];
 
 const gildedRose = new GildedRose(items, defaultConfig);
-var days: number = 100;
+const days = 100;
 const data: string[] = [];
 for (let i = 0; i < days; i++) {
   data.push(`-------- day ${i} --------`);

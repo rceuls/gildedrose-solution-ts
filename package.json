@@ -6,7 +6,8 @@
     "precompile": "rimraf app/**/*.js test/**/*.js",
     "compile": "tsc",
     "pretest": "rimraf app/**/*.js test/**/*.js",
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "lint": "eslint --ext .ts ."
   },
   "license": "MIT",
   "private": true,
@@ -14,7 +15,10 @@
     "@types/chai": "~3.5.2",
     "@types/mocha": "~2.2.41",
     "@types/node": "~7.0.18",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
     "chai": "~4.2.0",
+    "eslint": "^7.24.0",
     "mocha": "~8.2.1",
     "nyc": "~15.1.0",
     "rimraf": "~3.0.2",

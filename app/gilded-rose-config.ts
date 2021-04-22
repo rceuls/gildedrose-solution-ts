@@ -3,7 +3,7 @@ import {
   ruleForBackstagePasses,
   ruleForBrie,
   ruleForSulfuras,
-  ruleForSummons,
+  ruleForConjurations,
 } from "./gilded-rose-rules";
 
 export interface IGildedRoseConfig {
@@ -15,6 +15,6 @@ export const defaultConfig: IGildedRoseConfig = {
     ruleForBrie,
     ruleForBackstagePasses,
     ruleForSulfuras,
-    ruleForSummons,
+    ruleForConjurations,
   ],
 };

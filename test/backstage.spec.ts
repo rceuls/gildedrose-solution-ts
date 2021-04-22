@@ -20,49 +20,49 @@ describe("Gilded Rose - backstage tests", () => {
     expect(ruleForBackstagePasses.nameMatches("potato")).to.eq(false);
   });
 
-  it("Should update backstage - 1", () => {
+  it("Should update backstage - sellIn 10 -> 9, quality 14 -> 12 (1 iter)", () => {
     const ourItem = new Item("BSP", 10, 12);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(14);
     expect(ourItem.sellIn).to.eq(9);
   });
 
-  it("Should update backstage - 2", () => {
+  it("Should update backstage - sellIn 0 -> -1, quality 12 -> 0 (1 iter)", () => {
     const ourItem = new Item("BSP", 0, 12);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(0);
     expect(ourItem.sellIn).to.eq(-1);
   });
 
-  it("Should update backstage - 3", () => {
+  it("Should update backstage - sellIn 0 -> -1, quality 49 -> 0 (1 iter)", () => {
     const ourItem = new Item("BSP", 0, 49);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(0);
     expect(ourItem.sellIn).to.eq(-1);
   });
 
-  it("Should update backstage - 4", () => {
+  it("Should update backstage - sellIn 5 -> 4, quality 12 -> 15 (1 iter)", () => {
     const ourItem = new Item("BSP", 5, 12);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(15);
     expect(ourItem.sellIn).to.eq(4);
   });
 
-  it("Should update backstage - 5", () => {
+  it("Should update backstage - sellIn 1 -> 0, quality 12 -> 15 (1 iter)", () => {
     const ourItem = new Item("BSP", 1, 12);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(15);
     expect(ourItem.sellIn).to.eq(0);
   });
 
-  it("Should update backstage - 6", () => {
+  it("Should update backstage - sellIn 15 -> 14, quality 12 -> 13 (1 iter)", () => {
     const ourItem = new Item("BSP", 15, 12);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(13);
     expect(ourItem.sellIn).to.eq(14);
   });
 
-  it("Should update backstage - 7", () => {
+  it("Should update backstage - sellIn 15 -> 14, quality 500 -> 50 (1 iter)", () => {
     const ourItem = new Item("BSP", 15, 500);
     ruleForBackstagePasses.update(ourItem);
     expect(ourItem.quality).to.eq(50);

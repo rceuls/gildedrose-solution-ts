@@ -15,42 +15,42 @@ describe("Gilded Rose - sulfuras tests", () => {
     expect(ruleForSulfuras.nameMatches("dfd")).to.eq(false);
   });
 
-  it("Should update sulfuras - 1", () => {
+  it("Should update sulfuras - sellIn 10 -> 10, quality 12 -> 80 (1 iter)", () => {
     const ourItem = new Item("sulfuras", 10, 12);
     ruleForSulfuras.update(ourItem);
     expect(ourItem.quality).to.eq(80);
     expect(ourItem.sellIn).to.eq(10);
   });
 
-  it("Should update sulfuras - 2", () => {
+  it("Should update sulfuras - sellIn 0 -> 0, quality 12 -> 80 (1 iter)", () => {
     const ourItem = new Item("sulfuras", 0, 12);
     ruleForSulfuras.update(ourItem);
     expect(ourItem.quality).to.eq(80);
     expect(ourItem.sellIn).to.eq(0);
   });
 
-  it("Should update sulfuras - 3", () => {
+  it("Should update sulfuras - sellIn 0 -> 0, quality 49 -> 80 (1 iter)", () => {
     const ourItem = new Item("sulfuras", 0, 49);
     ruleForSulfuras.update(ourItem);
     expect(ourItem.quality).to.eq(80);
     expect(ourItem.sellIn).to.eq(0);
   });
 
-  it("Should update sulfuras - 4", () => {
+  it("Should update sulfuras - sellIn 5 -> 5, quality 12 -> 80 (1 iter)", () => {
     const ourItem = new Item("sulfuras", 5, 12);
     ruleForSulfuras.update(ourItem);
     expect(ourItem.quality).to.eq(80);
     expect(ourItem.sellIn).to.eq(5);
   });
 
-  it("Should update sulfuras - 5", () => {
+  it("Should update sulfuras - sellIn 1 -> 1, quality 12 -> 80 (1 iter)", () => {
     const ourItem = new Item("sulfuras", 1, 12);
     ruleForSulfuras.update(ourItem);
     expect(ourItem.quality).to.eq(80);
     expect(ourItem.sellIn).to.eq(1);
   });
 
-  it("Should update sulfuras - 6", () => {
+  it("Should update sulfuras - sellIn 15 -> 15, quality 12 -> 80 (1 iter)", () => {
     const ourItem = new Item("sulfuras", 15, 12);
     ruleForSulfuras.update(ourItem);
     expect(ourItem.quality).to.eq(80);

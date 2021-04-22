@@ -48,7 +48,7 @@ export const ruleForSulfuras: IGildedRoseSpecialRule = {
   },
 };
 
-export const ruleForSummons: IGildedRoseSpecialRule = {
+export const ruleForConjurations: IGildedRoseSpecialRule = {
   nameMatches: (itemName: string) =>
     itemName.toLocaleLowerCase().indexOf("conjured") !== -1,
   update: (item: Item) => {

@@ -4,10 +4,12 @@ import { ruleForConjurations } from "../app/gilded-rose-rules";
 
 // Added some basic unit tests for existing functionality.
 // Normally these should exist => see also golden-master-integration.spec.ts.
-describe("Gilded Rose - summons tests", () => {
-  it("Should summons summons - name check", () => {
+describe("Gilded Rose - conjuration tests", () => {
+  it("Should conjuration - name check", () => {
     expect(ruleForConjurations.nameMatches("CONJURED stuff")).to.eq(true);
-    expect(ruleForConjurations.nameMatches("blabla conjured blabla")).to.eq(true);
+    expect(ruleForConjurations.nameMatches("blabla conjured blabla")).to.eq(
+      true
+    );
     expect(ruleForConjurations.nameMatches("CoNjUrEd")).to.eq(true);
     expect(
       ruleForConjurations.nameMatches("summoned ruleForConjurations CONJURED")
